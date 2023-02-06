@@ -1,5 +1,5 @@
 {
-  "name": "graphql-schema-typescript",
+  "name": "@lookback/graphql-schema-typescript",
   "version": "1.6.0",
   "description": "Generate TypeScript from GraphQL's schema type definitions",
   "main": "./lib/index.js",
@@ -10,11 +10,12 @@
     "test": "jest --bail",
     "lint": "tslint -p tslint.json && tsc --noEmit",
     "build": "del-cli \"./lib/*\" && tsc",
-    "prepack": "yarn lint && yarn test"
+    "prepack": "yarn lint && yarn test",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dangcuuson/graphql-schema-typescript.git"
+    "url": "git+https://github.com/lookback/graphql-schema-typescript.git"
   },
   "keywords": [],
   "author": "Jack Dang <jack.dang@itutorworld.com.au>",
@@ -58,5 +59,8 @@
       "js",
       "json"
     ]
-  }
+  },
+  "files": [
+    "lib"
+  ]
 }
